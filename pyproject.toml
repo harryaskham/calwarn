@@ -1,0 +1,24 @@
+[project]
+name = "calwarn"
+version = "0.1.0"
+dependencies = [
+  "requests",
+  "types-requests",
+  "icalendar"
+]
+
+[project.scripts]
+calwarn = "calwarn:calwarn.cli_main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.mypy]
+packages = "calwarn"
+enable_incomplete_feature = "NewGenericSyntax"
+check_untyped_defs = true
+
+[tool.pylsp-mypy]
+enabled = true
+live_mode = true
+strict = true

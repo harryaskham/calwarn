@@ -112,7 +112,7 @@ def init_args():
     return args
 
 
-def main():
+def cli_main():
     args = init_args()
     calwarn = CalWarn.from_ics_path(
             ics_path=args.ics,
@@ -124,4 +124,4 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(cli_main())
